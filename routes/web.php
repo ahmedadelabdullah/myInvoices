@@ -66,12 +66,11 @@ Route::group([
 Route::group([
     'prefix' => LaravelLocalization::setLocale(),
     'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ],
-    'namespace' => 'Admin',
     'as' =>'admin.'
 ],function (){
     Route::group(['prefix' => 'admin',
     ],function (){
-        Route::resource('makers','MaterialInvoiceController');
+        Route::resource('makers','MakerController');
     });
 
 });

@@ -14,7 +14,9 @@ class MakerController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.makers.index',
+            ['makers' => Maker::paginate(10)]
+        );
     }
 
     /**
