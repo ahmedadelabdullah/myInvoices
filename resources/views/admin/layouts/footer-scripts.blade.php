@@ -8,6 +8,9 @@
 
 <!-- JQuery min js -->
 <script src="{{URL::asset('admin-assets/plugins/jquery/jquery.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/pickadate/picker.js')}}"></script>
+<script src="{{URL::asset('assets/js/pickadate/picker.date.js')}}"></script>
+<script src="{{URL::asset('assets/js/pickadate/picker.time.js')}}"></script>
 <!-- Bootstrap Bundle js -->
 <script src="{{URL::asset('admin-assets/plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{URL::asset('admin-assets/js/my_js.js')}}"></script>

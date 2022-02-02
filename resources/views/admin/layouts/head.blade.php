@@ -21,5 +21,8 @@
 <link href="{{URL::asset('admin-assets/css-rtl/style-dark.css')}}" rel="stylesheet">
 <!---Skinmodes css-->
 <link href="{{URL::asset('admin-assets/css-rtl/skin-modes.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/css/pickadate/classic.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/css/pickadate/classic.date.css')}}" rel="stylesheet">
+<link href="{{URL::asset('assets/css/pickadate/classic.time.css')}}" rel="stylesheet">
 <!-- Title -->
 <title> Models - @yield('title') </title>

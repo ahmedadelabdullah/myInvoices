@@ -1,5 +1,9 @@
-$(document).ready(function () {
 
+
+$(document).ready(function () {
+    $('.pickadate').pickadate({
+        formate:'yyyy-mm-dd'
+    });
 $('#invoice_details').on('keyup blur' , '.quantity' , function () {
     let $row = $(this).closest('tr');
     let quantity = $row.find('.quantity').val() || 0;

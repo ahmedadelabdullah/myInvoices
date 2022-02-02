@@ -75,6 +75,18 @@ Route::group([
 
 });
 
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath' ],
+    'as' =>'admin.'
+],function (){
+    Route::group(['prefix' => 'admin',
+    ],function (){
+        Route::resource('journals','JournalController');
+    });
+
+});
+
 
 
 
