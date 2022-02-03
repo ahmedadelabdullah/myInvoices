@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJournalsTable extends Migration
+class CreatePhonesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateJournalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('journals', function (Blueprint $table) {
+        Schema::create('phones', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('amount');
-            $table->text('data');
-            $table->date('date');
+            $table->string('phone');
+            $table->unsignedBigInteger('user_id')->index();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateJournalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('journals');
+        Schema::dropIfExists('phones');
     }
 }

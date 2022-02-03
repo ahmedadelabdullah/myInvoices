@@ -2,21 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Maker;
+use App\Phone;
 use Illuminate\Http\Request;
 
-class MakerController extends Controller
+class PhoneController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('admin.makers.index',
-            ['makers' => Maker::paginate(10)]
-        );
+        //
     }
 
     /**
@@ -43,10 +41,10 @@ class MakerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Maker  $maker
+     * @param  \App\Phone  $phone
      * @return \Illuminate\Http\Response
      */
-    public function show(Maker $maker)
+    public function show(Phone $phone)
     {
         //
     }
@@ -54,10 +52,10 @@ class MakerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Maker  $maker
+     * @param  \App\Phone  $phone
      * @return \Illuminate\Http\Response
      */
-    public function edit(Maker $maker)
+    public function edit(Phone $phone)
     {
         //
     }
@@ -66,10 +64,10 @@ class MakerController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Maker  $maker
+     * @param  \App\Phone  $phone
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Maker $maker)
+    public function update(Request $request, Phone $phone)
     {
         //
     }
@@ -77,10 +75,10 @@ class MakerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Maker  $maker
+     * @param  \App\Phone  $phone
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Maker $maker)
+    public function destroy(Phone $phone)
     {
         //
     }

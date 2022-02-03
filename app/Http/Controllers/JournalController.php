@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\admin\Journal;
+use App\Phone;
+use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class JournalController extends Controller
@@ -10,11 +13,24 @@ class JournalController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
-        return view('admin.journals.index');
+
+        $user = Journal::first();
+//        return response() -> json($user);
+                $today = Carbon::now('Egypt')->toDateString();
+                return view('admin.journals.index',
+        ['today' => $today ,
+            'statments' => Journal::paginate(10),
+            'user'=>$user
+
+            ]
+//                ['today' => Journal::find(Carbon::now('Egypt')->toDateString())]
+          );
+
+
     }
 
     /**

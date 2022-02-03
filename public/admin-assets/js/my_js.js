@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
     $('.pickadate').pickadate({
-        formate:'yyyy-mm-dd'
+        max: true
     });
 $('#invoice_details').on('keyup blur' , '.quantity' , function () {
     let $row = $(this).closest('tr');
